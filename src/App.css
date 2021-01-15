@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+*{
+  font-family: 'Nunito', sans-serif;
+}
+*,*+*{
+  box-sizing: border-box;
+}
+header{
+  font-size: 36px;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0px 5px 1px #333333;
+  font-weight: bold;
+}
+body{
+  background-color: #f0f0f0;
+}
+body.open{
+  overflow: hidden;
+}
+.wrap{
+  max-width: 1366px;
+  margin: 0 auto;
+}
+.notecard{
+  display: flex;
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 2px 2px 5px 1px #bbbbbb;
+  border-radius: 5px;
+  margin: 20px;
+  align-items: center;
+}
+.title{
+  margin-right: auto;
+  font-size: 24px;
+  font-weight: bold;
+}
+.delete{
+  background-color: rgb(255, 70, 70);
+}
+.edit{
+  background-color: rgb(68, 206, 68);
+
+}
+.button.add{
+  background-color: rgb(70, 70, 255);
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 24px;
+  padding: 10px;
+}
+.button{
+  cursor: pointer;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  user-select: none;
+}
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(39, 39, 39, 0.479);
+  display: grid;
+  place-items: center;
+}
+.modalbody{
+  padding: 20px;
+  width: min(100%,1000px);
+  height: 80%;
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+  transform: translateY(125%);
+  transition: 500ms;
+  display: flex;
+  flex-direction: column;
+}
+.modalbody.open{
+  transform: translateY(0%);
+}
+.modaltitle>input{
+  font-size: 36px;
+  outline: none;
+  border: none;
+}
+.modalcontent{
+  flex-grow: 1;
+}
+.modalcontent>textarea{
+  width: 100%;
+  height: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+.modalbuttoncont{
+  display: flex;
+}
+.close{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+  height: 36px;
+  line-height: 36px;
+  width: 36px;
+  transform: rotateZ(45deg);
+  border: 2px solid black;
+  border-radius: 25px;
+  cursor: pointer;
+  user-select: none;
+}
+@media only screen and (max-width:1024px){
+  .modalbody{
+    height: 100%;
+    transform: translateY(100%);
+  }
+}
